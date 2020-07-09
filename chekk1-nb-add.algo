@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR
+phrase ; INTEGER
+vowels; INTEGER
+nbcar;INTEGER
+nbrescp;INTEGER
+longphr;INTEGER
+i:=0;entier
+
+BEGIN
+read(phrase)
+FOR i FROM 0 TO phrase.length DO 
+IF (phrase[0]="a"OR"e"OR"i"OR"o" OR"u"OR"y") THEN
+    vowels=vowels + 1;
+END_IF 
+END_FOR
+
+FOR i FROM 0 TO phrase.length DO
+   IF (phrase[i]<>" ") THEN
+       nbcar=nbcar + 1 ;
+   END_IF 
+END_FOR
+
+
+FOR i FROM 0 TO phrase.length DO
+IF (phrase[i]=" ") THEN
+       nbrescp=nbrescp + 1;
+   END_IF 
+END_FOR
+FOR i FROM 0 TO phrase.length   DO
+    (phrase.length) - (nbrescp) = longphr;
+END_FOR
+
+
+
+// END
