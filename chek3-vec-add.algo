@@ -1,0 +1,24 @@
+    ALGORITHM produit scalaire
+    VAR
+        v1,v2: ARRAY_OF INTEGER[50];;
+         sum :INTEGER=0;
+        i,j:INTEGER=0
+    BEGIN 
+    // Read elements
+        Read(v1)
+        Read(v2)
+        //Read elements v1
+        FOR i FROM TO v1.length-1 DO
+        //Read elements v2
+            FOR j FROM  TO v2.length-1  DO 
+            //  declaration d une condition si les deux vecteurs egaux                                   
+                IF (v1.length = v2.length) THEN
+                    sum := sum + v1[i]*v2[i]
+                END_IF 
+            END_FOR
+        END_FOR
+        // declaration d une condition si 0 orthogonal
+        IF(sum = 0) THEN 
+        write("v1,v2 orthogonal")
+        END_IF
+    END
