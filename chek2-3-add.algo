@@ -1,0 +1,33 @@
+        ALGORITHM algorithm_name
+        VAR
+            tab1,tab2 : ARRAY_OF type[length];
+            i,j: INTEGER;
+            test:BOOLEAN:=true;
+        BEGIN 
+        //t1
+        FOR i FROM TO tab1.length-1 DO
+            FOR j FROM  TO tab2.length-1  DO
+                IF (tab1[i]<>tab2[j]) THEN
+                    test:=false;
+                END_IF
+                IF (test=true) THEN
+                    sum:=sum+tab1[i];
+                END_IF
+            END_FOR
+        END_FOR
+        FOR i FROM  TO tab2.length-1  DO
+
+            FOR j FROM  TO tab1.length-1  DO
+            IF (tab2[i]=tab1[j]) THEN
+                test:=true;
+                sum:=sum+tab2[i];
+            ELSE
+                test:false;
+            END_IF
+                
+            END_FOR
+        END_FOR
+                    Write(sum);
+
+        
+    END             

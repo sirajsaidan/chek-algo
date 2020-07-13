@@ -1,0 +1,33 @@
+    ALGORITHM algorithm_name
+    var
+    tab3,tab2,tab1: ARRAY_OF type[length];
+    k,som,i,j:Entier=0;
+    BEGIN
+
+        write("tab1");
+        write("tab2");
+    FOR i FROM 0 TO tab1.length  DO
+    Read(tab1[i]);
+    FOR j FROM 0 TO tab2.length  DO
+    Read(tab2[j]);
+        IF (tab1[i]=)tab2[j] THEN
+            Break;
+        END_IF
+            tab3[k]:=tab1[i]<>tab2[j];
+
+    END_FOR
+    
+    END_FOR
+    FOR k FROM 0 TO tab3.length  DO
+        Read tab3[k];
+        IF (tab3[k]=) THEN
+            write("tableau vide")
+            
+            ELSE
+            som:=0
+            som:= som +tab3[k] 
+            
+        END_IF
+    END_FOR
+
+    END

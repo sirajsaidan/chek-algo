@@ -1,0 +1,44 @@
+            ALGORITHM algorithm_name
+            var
+            tab3,tab2,tab1: ARRAY_OF type[length];
+            k,som,i,j:Entier=0;
+            BEGIN
+
+                Read(tab1);
+                Read(tab2);
+            FOR i FROM 0 TO tab1.length-1  DO
+           
+            FOR j FROM 0 TO tab2.length-1  DO
+           
+                IF (tab1[i]=tab2[j]) THEN
+                    Break;
+                END_IF
+                    tab3[k]:=tab2[j];
+
+            END_FOR
+            
+            END_FOR
+            FOR i FROM 0 TO tab2.length-1  DO
+            Read(tab1[i]);
+            FOR j FROM 0 TO tab1.length-1  DO
+            Read(tab2[j]);
+                IF (tab2[i]=)tab1[j] THEN
+                    Break;
+                END_IF
+                    tab3[k]:=tab1[j];
+
+            END_FOR
+            
+            END_FOR
+            
+            FOR k FROM 0 TO tab3.length  DO
+                IF (tab3.length=0) THEN
+                    write("tableau vide")
+                    
+                    ELSE
+                    som:= som +tab3[k] 
+                    
+                END_IF
+            END_FOR
+
+            END
