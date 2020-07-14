@@ -1,0 +1,25 @@
+ALGORITHM algorithm_name
+VAR
+      tab: ARRAY_OF INTEGER[];
+      n:INTEGER;
+      i,key,j:INTEGER;
+
+BEGIN
+    Read(tab)
+    n:= tab.length
+    FOR i FROM 0 TO tab<n  DO
+        key=tab[i];
+        j=i-1;
+
+        //Déplacer les éléments d'arr [0..i-1], qui sont
+        // supérieur à la clé, à une position d'avance
+         //de leur position actuelle  
+
+        WHILE (j>=0 && tab[j]>key) DO
+            tab[j+1]=arr[j];
+            j=j-1
+        END_WHILE
+        tab[j+1]=key;
+    END_FOR
+
+END
