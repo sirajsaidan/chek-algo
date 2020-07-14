@@ -1,0 +1,20 @@
+    ALGORITHM algorithm_name
+    VAR
+        verify:=true
+        j,i:INTEGER;
+        mot:STRING;
+    BEGIN
+        Read(un mot)
+        mot:=tab[i];
+    FOR i FROM 0 TO (Str.length-1)/2 STEP 1 DO
+    FOR j FROM Str.length-1 TO (Str.length-1)/2 STEP -1  DO
+        IF (mot[i]<>mot[j]) THEN
+        verify:=false
+        END_IF
+        IF (verify:=true) THEN
+        write("le mot est palindrome")
+        END_IF
+    END_FOR
+            
+        END_FOR
+    END
