@@ -1,0 +1,93 @@
+            ALGORITHM Tree basic operations 
+
+            VAR
+            cal2,cal1:INTEGER
+
+
+                root:Rc,Lc,key,val,:INTEGER
+            BEGIN
+            IF (root=null OR root^.val=key) THEN
+                RETURN 0;
+            END_IF
+                IF (root^.val<key) THEN
+        cal1:=root^.Rc
+                ELSE
+            cal2:=root^.Lc
+
+                END_IF
+                IF (Lc>Rc) THEN
+                RETURN cal2+cal1
+                END_IF
+                END
+
+
+                
+                //gives the number of leaves in the tree.
+                            FUNCTION gives the number (val:INTEGER) : bt
+                            VAR
+                                tmp:^bt;
+                            BEGIN
+                    tmp := createNode(); // memory allocation for a node of type BST
+                        tmp^.VAL := val;
+                        tmp^.LC := NULL;
+                        tmp^.RC := NULL;
+                        RETURN tmp;
+                        FUNCTION insertbt(leaves:^bt,val:INTEGER) :^bt//fonction utilitaire pour insérer un nouveau nœud avec une valeur donnée dans bt * /
+                            
+                        
+                        BEGIN
+                            // si le leaves vide , return une nouvelle leaves
+                            IF (leaves=nul) THEN
+                                RETURN newnLeaves(val);
+                            END_IF
+                            // si non cree une leaves
+                            IF (val<=leaves^.val) THEN
+                            leaves.lc:=insertbt(leaves^.lc,VAL);
+                            ELSE
+                                leaves.RC:=insertbt(leaves^.RC,VAL);
+                            END_IF
+                            RETURN leaves;
+                        END 
+
+
+                            
+                //maximum
+                bt:STRUCT
+
+                                    Lc: ^bt;//a pointer to child Right;
+                                    Rc : ^bt;//pointer to child left;
+                                    val:INTEGER
+                                END_STRUCT
+                                FUNCTION bt(root:^bt) : INTEGER:bt
+                                
+                                BEGIN
+                                IF (roo<>NULL) THEN
+                                    If(root^.Lc=NULL AND root^.Rc=NULL)THEN
+                                    RETURN root.VAL;
+                                    ELSE-IF (root^Lc=NULL) THEN
+                                        RETURN max(root^val,maximum(root^.Rc));
+                                        ELSE-IF (root^Rc=NULL) THEN
+                                        RETURN max(root^val,maximum(root^.Lc));
+                                        ELSE
+                                        RETURN max(maximum(root^Lc),maximum(root^Rc));
+                                        
+                                    END_IF
+                                END_IF
+                                END
+    // full tree
+    FUNCTION bt(root^bt) : BOOLEAN:bt
+
+    BEGIN
+        IF (root<>NULL) THEN
+            IF (root^.LC<>NULL AND root^.Rc<>NULL) THEN
+                RETURN (isFullTree(root^.Rc) AND isFullTree(root^.Lc));
+                ELSE-IF (root^Lc==NULL AND root^.Rc==NULL) THEN
+                    RETURN true;
+                    ELSE
+                    RETURN false;
+                END_IF
+            END_IF
+        END_IF
+    END
+
+            
